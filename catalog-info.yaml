@@ -5,7 +5,7 @@ apiVersion: backstage.io/v1alpha1
 kind: ""
 metadata:
   name: 'ibl-edx-greeting'
-  description: "REST API endpoint greeting"
+  description: "REST API greeting endpoint"
   annotations:
     # (Optional) Annotation keys and values can be whatever you want.
     # We use it in Open edX repos to have a comma-separated list of GitHub user

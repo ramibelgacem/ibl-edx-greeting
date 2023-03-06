@@ -6,7 +6,7 @@
 ibl-edx-greeting
 ================
 
-REST API endpoint greeting
+REST API greeting endpoint
 
 Contents:
 

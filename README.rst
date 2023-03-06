@@ -14,7 +14,7 @@ ibl-edx-greeting
 Purpose
 *******
 
-REST API endpoint greeting
+REST API greeting endpoint
 
 TODO: The ``README.rst`` file should start with a brief description of the repository and its purpose.
 It should be described in the context of other repositories under the ``openedx``
