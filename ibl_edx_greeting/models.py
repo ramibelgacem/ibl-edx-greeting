@@ -1,11 +1,12 @@
 """
 Database models for ibl_edx_greeting.
 """
-# from django.db import models
+from django.db import models
+
 from model_utils.models import TimeStampedModel
 
 
-class greeting_api(TimeStampedModel):
+class Greeting(TimeStampedModel):
     """
     TODO: replace with a brief description of the model.
 
@@ -14,11 +15,11 @@ class greeting_api(TimeStampedModel):
     https://open-edx-proposals.readthedocs.io/en/latest/oep-0030-arch-pii-markup-and-auditing.html
     """
 
-    # TODO: add field definitions
+    message = models.CharField(max_length=255)
 
     def __str__(self):
         """
         Get a string representation of this model instance.
         """
         # TODO: return a string appropriate for the data fields
-        return '<greeting_api, ID: {}>'.format(self.id)
+        return "<greeting_api, ID: {}>".format(self.id)

@@ -19,7 +19,7 @@ class IblEdxGreetingConfig(AppConfig):
         "url_config": {
             "lms.djangoapp": {
                 "namespace": "ibl_edx_greeting",
-                "regex": "^api/",
+                "regex": "^ibl_edx_greeting/",
                 "relative_path": "urls",
             },
         }
