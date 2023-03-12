@@ -59,3 +59,5 @@ docs/ibl_edx_greeting.*.rst
 # Private requirements
 requirements/private.in
 requirements/private.txt
+
+.vscode
