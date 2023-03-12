@@ -21,5 +21,4 @@ class Greeting(TimeStampedModel):
         """
         Get a string representation of this model instance.
         """
-        # TODO: return a string appropriate for the data fields
-        return "<greeting_api, ID: {}>".format(self.id)
+        return "{}".format(self.message)
