@@ -10,4 +10,4 @@ class Testgreeting_api:
     """
 
     def test_something(self):
-        """TODO: Write real test cases."""
+        """Write real test cases."""

@@ -13,8 +13,7 @@ jobs:
    call-upgrade-python-requirements-workflow:
     with:
        branch: ${{ github.event.inputs.branch }}
-       # team_reviewers: ""
-       # email_address: email@edx.org
+       email_address: ramibelgacem@gmail.com
        send_success_notification: false
     secrets:
        requirements_bot_github_token: ${{ secrets.REQUIREMENTS_BOT_GITHUB_TOKEN }}
