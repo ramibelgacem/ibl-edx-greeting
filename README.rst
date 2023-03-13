@@ -31,6 +31,14 @@ Usage
   # Greeting REST API
   curl -X POST http://<URL>/ibledxgreeting/api/v0/greeting/ -H "Authorization: JWT <token>" -d '{"message": "hello"}'
 
+Documentation
+*************
+
+The big picture
+===============
+![Alt text](/docs/env.png)
+
+
 License
 *******
 
