@@ -3,3 +3,7 @@
 
 Django             # Web application framework
 django-model-utils        # Provides TimeStampedModel abstract base class
+djangorestframework
+edx-drf-extensions
+edx-rest-api-client
+django-oauth-toolkit
