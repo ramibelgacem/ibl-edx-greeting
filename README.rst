@@ -69,12 +69,12 @@ The code in this repository is licensed under the AGPL 3.0 unless otherwise note
 
 Please see `LICENSE.txt <LICENSE.txt>`_ for details.
 
-.. |ci-badge| image:: https://github.com/openedx/ibl-edx-greeting/workflows/Python%20CI/badge.svg?branch=main
-    :target: https://github.com/openedx/ibl-edx-greeting/actions
+.. |ci-badge| image:: https://github.com/ramibelgacem/ibl-edx-greeting/workflows/Python%20CI/badge.svg?branch=main
+    :target: https://github.com/ramibelgacem/ibl-edx-greeting/actions
     :alt: CI
 
 .. |license-badge| image:: https://img.shields.io/github/license/openedx/ibl-edx-greeting.svg
-    :target: https://github.com/ramibelgacem/ibl-edx-greeting/actions
+    :target: https://github.com/ramibelgacem/ibl-edx-greeting/blob/main/LICENSE.txt
     :alt: License
 
 .. |status-badge| image:: https://img.shields.io/badge/Status-Experimental-yellow
