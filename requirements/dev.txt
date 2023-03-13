@@ -274,3 +274,7 @@ wrapt==1.15.0
 # The following packages are considered to be unsafe in a requirements file:
 # pip
 # setuptools
+djangorestframework==3.12.4
+edx-drf-extensions==8.4.1
+edx-rest-api-client==5.5.0
+django-oauth-toolkit==1.3.2

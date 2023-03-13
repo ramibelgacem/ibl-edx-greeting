@@ -9,7 +9,6 @@ from rest_framework import permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from edx_rest_framework_extensions.auth.jwt.authentication import JwtAuthentication
-
 from edx_rest_api_client.client import OAuthAPIClient
 from oauth2_provider.models import Application
 

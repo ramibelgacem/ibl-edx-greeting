@@ -12,6 +12,3 @@ pip==23.0.1
     # via -r requirements/pip.in
 setuptools==67.5.1
     # via -r requirements/pip.in
-djangorestframework==3.12.4
-edx-drf-extensions
-edx-rest-api-client
