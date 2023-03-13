@@ -5,11 +5,14 @@ API Views
 import logging
 
 from django.apps import apps
+from django.conf import settings
 from rest_framework import permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from edx_rest_framework_extensions.auth.jwt.authentication import JwtAuthentication
+
 from edx_rest_api_client.client import OAuthAPIClient
+from oauth2_provider.models import Application
 
 from ibl_edx_greeting.rest_api.v0.serializers import GreetingSerializer
 
@@ -27,7 +30,7 @@ class GreetingAPIView(APIView):
     callback_message = "goodbye"
     app_config = apps.get_app_config("ibl_edx_greeting")
 
-    def post(self, request, format=None):
+    def post(self, request):
         serializer = GreetingSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -40,13 +43,21 @@ class GreetingAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def _greeting_callback(self):
+        try:
+            oauth_application = Application.objects.filter(
+                authorization_grant_type=Application.GRANT_CLIENT_CREDENTIALS
+            )[0]
+        except IndexError:
+            logger.warning("No Oauth2 application founds with client credentials grant")
+            return
+
         client = OAuthAPIClient(
-            GreetingAPIView.app_config.backend_service_edx_oauth2_provider_url,
-            GreetingAPIView.app_config.backend_service_edx_oauth2_key,
-            GreetingAPIView.app_config.backend_service_edx_oauth2_secret,
+            GreetingAPIView.app_config.oauth2_provider_url,
+            oauth_application.client_id,
+            oauth_application.client_secret,
         )
         callback_response = client.post(
-            "http://local.overhang.io/ibledxgreeting/api/v0/greeting/",
+            f"{settings.LMS_ROOT_URL}/ibledxgreeting/api/v0/greeting/",
             data={"message": GreetingAPIView.callback_message},
             timeout=(5, 5),
         )
