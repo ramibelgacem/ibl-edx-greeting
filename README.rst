@@ -42,24 +42,35 @@ References
 - Setup:
 
 https://docs.tutor.overhang.io/index.html
+
 https://github.com/openedx/edx-platform/blob/master/docs/guides/extension_points.rst
+
 https://github.com/openedx/edx-platform/tree/master/openedx/core/djangoapps/plugins
+
 https://github.com/openedx/edx-cookiecutters/tree/master/cookiecutter-django-app
+
 https://openedx.atlassian.net/wiki/spaces/AC/pages/3344924689/Using+Tutor+for+local+development#Working-with-edx-platform-Plugins
 
 - Coding:
 
 https://github.com/openedx/edx-django-utils/blob/master/edx_django_utils/plugins/README.rst
+
 https://blog.lawrencemcdaniel.com/getting-started-with-open-edx-plugin-architecture/
 
 - Authentication and Rest API best practices:
 
 https://docs.openedx.org/projects/openedx-proposals/en/latest/best-practices/oep-0049-django-app-patterns.html?highlight=plugin#rest-api
+
 https://openedx.atlassian.net/wiki/spaces/AC/pages/18350757/edX+REST+API+Conventions?NO_SSR=1#11.-Authentication
+
 https://docs.openedx.org/projects/openedx-proposals/en/latest/best-practices/oep-0042-bp-authentication.html?highlight=rest%20api#oauth2-and-jwts
+
 https://github.com/openedx/edx-platform/tree/master/openedx/core/djangoapps/oauth_dispatch
+
 https://github.com/openedx/edx-drf-extensions/blob/master/edx_rest_framework_extensions/auth/jwt/README.rst
+
 https://github.com/openedx/edx-platform/blob/master/openedx/core/djangoapps/oauth_dispatch/docs/decisions/0003-use-jwt-as-oauth-tokens-remove-openid-connect.rst
+
 https://github.com/openedx/edx-rest-api-client
 
 License
