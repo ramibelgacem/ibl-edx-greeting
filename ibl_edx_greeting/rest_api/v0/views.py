@@ -4,7 +4,6 @@ API Views
 
 import logging
 
-from django.apps import apps
 from django.conf import settings
 from rest_framework import permissions, status
 from rest_framework.views import APIView
@@ -28,7 +27,6 @@ class GreetingAPIView(APIView):
     permission_classes = (permissions.IsAuthenticated,)
     trigger_message = "hello"
     callback_message = "goodbye"
-    app_config = apps.get_app_config("ibl_edx_greeting")
 
     def post(self, request):
         serializer = GreetingSerializer(data=request.data)
@@ -52,7 +50,7 @@ class GreetingAPIView(APIView):
             return
 
         client = OAuthAPIClient(
-            GreetingAPIView.app_config.oauth2_provider_url,
+            f"{settings.LMS_ROOT_URL}/oauth2/access_token/",  # it could be defined in the IblEdxGreetingConfig class but it does not work # noqa: E501
             oauth_application.client_id,
             oauth_application.client_secret,
         )
