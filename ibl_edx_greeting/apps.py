@@ -20,9 +20,4 @@ class IblEdxGreetingConfig(AppConfig):
                 "relative_path": "urls",
             },
         },
-        "settings_config": {
-            "lms.djangoapp": {
-                "common": {"relative_path": "settings.base"},
-            }
-        },
     }
